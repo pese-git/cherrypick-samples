@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sample_app/bloc/user_bloc_event.dart';
 import 'package:sample_app/bloc/user_bloc_state.dart';

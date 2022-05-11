@@ -1,3 +1,3 @@
 class Scopes {
-  static final String APP_SCOPE = 'appScope';
+  static const String appScope = 'appScope';
 }

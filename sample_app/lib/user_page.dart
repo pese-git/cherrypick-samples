@@ -20,7 +20,7 @@ class UserPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider<UserBloc>(
       create: (context) {
-        return CherryPick.openScope(scopeName: Scopes.APP_SCOPE)
+        return CherryPick.openScope(scopeName: Scopes.appScope)
             .resolve<UserBloc>();
       },
       child: BlocBuilder<UserBloc, UserBlocState>(

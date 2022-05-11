@@ -9,7 +9,9 @@ import './app.dart';
 void main() async {
   final sharedPreferences = await SharedPreferences.getInstance();
 
-  CherryPick.openScope(scopeName: Scopes.APP_SCOPE).installModules(
+  final appScope = CherryPick.openScope(scopeName: Scopes.appScope);
+
+  appScope.installModules(
     [
       UserModule(sharedPreferences: sharedPreferences),
     ],

@@ -6,22 +6,22 @@ import 'user_repository.dart';
 class PrefUserRepository extends UserRepository {
   final SharedPreferences sharedPreferences;
 
-  static const String KEY_NAME = "KEY_NAME";
-  static const String KEY_EMAIL = "KEY_EMAIL";
+  static const String keyName = "KEY_NAME";
+  static const String keyEmail = "KEY_EMAIL";
 
   PrefUserRepository({required this.sharedPreferences});
 
   @override
   User getUser() {
     return User(
-      name: sharedPreferences.getString(KEY_NAME) ?? '',
-      email: sharedPreferences.getString(KEY_EMAIL) ?? '',
+      name: sharedPreferences.getString(keyName) ?? '',
+      email: sharedPreferences.getString(keyEmail) ?? '',
     );
   }
 
   @override
   void saveUser(User user) async {
-    await sharedPreferences.setString(KEY_NAME, user.name);
-    await sharedPreferences.setString(KEY_EMAIL, user.email);
+    await sharedPreferences.setString(keyName, user.name);
+    await sharedPreferences.setString(keyEmail, user.email);
   }
 }
