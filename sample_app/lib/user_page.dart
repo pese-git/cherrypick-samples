@@ -27,7 +27,7 @@ class UserPage extends StatelessWidget {
         builder: ((context, state) {
           return Scaffold(
             appBar: AppBar(
-              title: const Text('Sample App'),
+              title: Text(title),
             ),
             body: Column(
               children: [
