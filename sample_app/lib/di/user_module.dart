@@ -4,10 +4,10 @@ import 'package:sample_app/pref_user_repository.dart';
 import 'package:sample_app/user_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class RepositoryModule extends Module {
+class UserModule extends Module {
   final SharedPreferences sharedPreferences;
 
-  RepositoryModule({required this.sharedPreferences});
+  UserModule({required this.sharedPreferences});
 
   @override
   void builder(Scope currentScope) {

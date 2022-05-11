@@ -1,6 +1,6 @@
 import 'package:cherrypick/cherrypick.dart';
 import 'package:flutter/material.dart';
-import 'package:sample_app/di/repository_module.dart';
+import 'package:sample_app/di/user_module.dart';
 import 'package:sample_app/di/scopes.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -11,7 +11,7 @@ void main() async {
 
   CherryPick.openScope(scopeName: Scopes.APP_SCOPE).installModules(
     [
-      RepositoryModule(sharedPreferences: sharedPreferences),
+      UserModule(sharedPreferences: sharedPreferences),
     ],
   );
 
